@@ -50,7 +50,7 @@ Started March 28 2024 by Taeke van den Bosch, taekev@gmail.com
             <path>Aircraft/Supermarine-Swift/Systems/systems.xml</path>
 
             <property-rule n="105">
-                <path>Aircraft/Supermarine-Swift/Systems/pax.xml</path>
+                <path>Aircraft/Supermarine-Swift/Systems/pilot.xml</path>
             </property-rule>
         </systems>
         
@@ -96,7 +96,7 @@ Started March 28 2024 by Taeke van den Bosch, taekev@gmail.com
             <max-lb type="double">150.0</max-lb>
             <!-- WARNING: Max baggage "by the book" is 120lbs or less! -->
         </weight>
-        <pax-state type="int">0</pax-state>
+        <pilot-state type="int">0</pilot-state>
         <securing-state type="int">0</securing-state>
     </payload>
 
