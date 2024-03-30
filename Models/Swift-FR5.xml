@@ -2,6 +2,25 @@
 
 <PropertyList>
 	<path>swift-fr5.ac</path>
+
+  <!-- The human models depend on some properties (sim/model/crew/).
+         Since the properties never change, we can just directly add it
+         to the /ai/model/multiplay[i] tree.
+  -->
+  <multiplay>
+    <sim>
+      <model>
+        <crew>
+          <pilot n="0">
+            <pose include="Aircraft/Supermarine-Swift/Models/Human/pose-pilot.xml"/>
+            <character>0</character>
+            <outfit>0</outfit>
+            <equipment>0</equipment>
+          </pilot>
+        </crew>
+      </model>
+    </sim>
+  </multiplay>
 	
 	<!-- MP sound call -->
   <sound><path>Aircraft/Supermarine-Swift/Sounds/mp-sound.xml</path></sound>
@@ -16,6 +35,21 @@
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/Supermarine-Swift/Models/Liveries", 10);
+      
+      var rplayer = cmdarg();
+      
+      # Passengers
+      var pax_state_path = rplayer.getNode("sim/multiplay/generic/int[16]").getPath();
+
+      var pilot = rplayer.initNode("pax/pilot/present", 0, "BOOL");
+
+      setlistener(pax_state_path, func (node) {
+        var state = node.getValue();
+        pilot.setBoolValue(bits.test(state, 3));
+      }, 1, 0);
+
+      # Make sure human occupants are always visible in remote aircraft
+      rplayer.initNode("sim/model/occupants", 1, "BOOL");
     </load>
 
     <unload>
@@ -849,5 +883,49 @@
     
     </animation>	
 -->
+    <!-- Pilot, -->
+    <model>
+        <name>Pilot</name>
+        <path>Human/female-pilot.xml</path>
+        <offsets>
+            <x-m> 0.2 </x-m>
+            <y-m> -0.251 </y-m>
+            <z-m> -1.4 </z-m>
+        </offsets>
+    </model>
+
+    <!-- Pilot visible only when not in the cockpit, the walker is not activated and if there is enough weight on his seat -->
+    <animation>
+        <type>select</type>
+        <object-name>Pilot</object-name>
+        <condition>
+            <and>
+                <!-- Note: the sim/ properties do NOT start with a /,
+                     which means that FlightGear tries to find them in
+                     either:
+
+                        (a) the root (/) for the local aircraft, or:
+                        (b) in /ai/models/multiplayer[i]
+
+                     In the case of (b), the properties do not exist, thus
+                     the <not-equals> gets evaluated to true (always), which
+                     is what we want, but this behavior is error-prone.
+                -->
+                <not-equals>
+                    <property>/sim/current-view/name</property>
+                    <value>Cockpit View</value>
+                </not-equals>
+                <not-equals>
+                    <property>/sim/current-view/name</property>
+                    <value>IFR Training View</value>
+                </not-equals>
+                <not>
+                    <property>/sim/walker/outside</property>
+                </not>
+                <property>pax/pilot/present</property>
+                <property>sim/model/occupants</property>
+            </and>
+        </condition>
+    </animation>
 
 </PropertyList>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+    <!-- Position the pilot viewpoint and angle -->
+    <view>
+        <internal type="bool" archive="y">true</internal>
+        <config>
+            <x-offset-m archive="y" type="double">-0.22</x-offset-m>
+            <y-offset-m archive="y" type="double">0.269</y-offset-m>
+            <z-offset-m archive="y" type="double">0.35</z-offset-m>
+            <pitch-offset-deg type="double">-11</pitch-offset-deg>
+            <default-field-of-view-deg>73.6</default-field-of-view-deg>
+        </config>
+    </view>
+
+
+</PropertyList>
