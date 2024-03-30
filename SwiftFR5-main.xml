@@ -88,13 +88,140 @@ Started March 28 2024 by Taeke van den Bosch, taekev@gmail.com
 
 
 
+
+        <!-- 170 lb max per empty ammunition tanks and 50 lb per equipment bays (no alteration to ballast required)  -->
+        <weight n="1">
+            <name>ammunition bay</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+                  <selected>Baggage</selected>
+            <opt>
+                <name>Baggage</name>
+                <lbs>340</lbs>
+            </opt>
+            <opt>
+                <name>Ammo</name>
+                <lbs>340</lbs>
+            </opt>
+ 
+        </weight>
+
+
+        <weight n="2">
+            <name>equipment bay</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+            <selected>Baggage</selected>
+            <opt>
+                <name>Baggage</name>
+                <lbs>100</lbs>
+            </opt>
+            <opt>
+                <name>equipment</name>
+                <lbs>100</lbs>
+            </opt>
+        </weight>
+
         <weight>
-            <name type="string">Baggage</name>
+            <name type="string">ammunition bay</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+            <arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">340</max-lb>
+    
+        </weight>
+
+                <weight>
+            <name type="string">equipment bay</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+            <arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">100</max-lb>
+    
+        </weight>
+
+        <weight>
+            <name type="string">weapons</name>
             <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
             <arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
             <min-lb type="double">0.0</min-lb>
-            <max-lb type="double">150.0</max-lb>
-            <!-- WARNING: Max baggage "by the book" is 120lbs or less! -->
+            <max-lb type="double">700</max-lb>
+            <!-- guns and fittings arm (130mm forward of cg) -->
+        </weight>
+
+        <weight>
+            <name type="string">optional avionics</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
+            <arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">65</max-lb>
+            <!-- DME IFF GGS (400mm forward of cg) -->
+        </weight>
+
+
+        <weight n="6">
+            <name>nose cameras</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]"/>
+            <selected>none</selected>
+            <opt>
+                <name>none</name>
+                <lbs>0</lbs>
+            </opt>
+            <opt>
+                <name>F.95 nose</name>
+                <lbs>26</lbs>
+            </opt>
+            <opt>
+                <name>F.95 beam</name>
+                <lbs>26</lbs>
+            </opt>
+            <opt>
+                <name>Both</name>
+                <lbs>52</lbs>
+            </opt>
+        <!-- F.95 nose and/or beam (550mm and 450mm forward of cg)   -->
+        </weight>
+
+        <weight n="7">
+            <name>mid cameras</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]"/>
+            <selected>none</selected>
+            <opt>
+                <name>none</name>
+                <lbs>0</lbs>
+            </opt>
+            <opt>
+                <name>F.95 gun bay</name>
+                <lbs>26</lbs>
+            </opt>
+            <opt>
+                <name>G.45 belly</name>
+                <lbs>26</lbs>
+            </opt>
+            <opt>
+                <name>Both</name>
+                <lbs>52</lbs>
+            </opt>
+        <!-- G.45 camera and F.95 gun bay camera (250mm forward of cg)  -->
+        </weight>
+
+        <weight>
+            <name type="string">Ballast-weights</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[8]"/>
+            <arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">290</max-lb>
+            <!-- 19 total ballast weights 10 lb each  (650mm rear of CG)
+              Ballasting as follows:
+              14 - for guns and fittings
+              1  - for DME
+              1  - for I.F.F
+              1  - per set of V.H.F.
+              1  - for G.G.S
+              1  - for F.45 camera
+              2  - per F.95 camera nose or beam
+              1  - gun F.95 bay camera 
+              5  - standard always carried
+            
+            -->
         </weight>
         <pilot-state type="int">0</pilot-state>
         <securing-state type="int">0</securing-state>
@@ -102,33 +229,37 @@ Started March 28 2024 by Taeke van den Bosch, taekev@gmail.com
 
     <limits>
         <!--
-            Specifications Vne: 158 KIAS
-            Normal category (1500 - 2400 or 2550 lbs):
-                max positive-g: 3.8, max negative-g: -1.52,
-            Utility category (1500 - 2100 lbs):
-                max positive-g: 4.4, max negative-g: -1.76,
+            Specifications Vne: 600 KIAS
+            Normal category (19500 lbs):
+                max positive-g: 7.5, max negative-g: -3,
+            With belly tank category (21500 lbs):
+                max positive-g: 6.5, max negative-g: -3,
             Structure holds at least 150 % max g's
         -->
-        <max-positive-g>3.8</max-positive-g>
-        <max-negative-g>-1.52</max-negative-g>
+        <max-positive-g>7.5</max-positive-g>
+        <max-negative-g>-3</max-negative-g>
 
-        <vne>158</vne>
+        <vne>600</vne>
 
-        <mass-and-balance-160hp>
-            <maximum-ramp-mass-lbs>2407</maximum-ramp-mass-lbs>
-            <maximum-takeoff-mass-lbs>2400</maximum-takeoff-mass-lbs>
+        <mass-and-balance12>
+            <maximum-ramp-mass-lbs>21850</maximum-ramp-mass-lbs>
+            <maximum-takeoff-mass-lbs>21500</maximum-takeoff-mass-lbs>
+            <maximum-landing-mass-lbs>17000</maximum-landing-mass-lbs>
+        </mass-and-balance12>
+
+        <mass-and-balance-belly-tank>
+            <maximum-ramp-mass-lbs>21850</maximum-ramp-mass-lbs>
+            <maximum-takeoff-mass-lbs>21500</maximum-takeoff-mass-lbs>
             <maximum-landing-mass-lbs>2400</maximum-landing-mass-lbs>
-        </mass-and-balance-160hp>
+        </mass-and-balance-belly-tank>
 
-        <mass-and-balance-180hp>
-            <maximum-ramp-mass-lbs>2558</maximum-ramp-mass-lbs>
-            <maximum-takeoff-mass-lbs>2550</maximum-takeoff-mass-lbs>
-            <maximum-landing-mass-lbs>2550</maximum-landing-mass-lbs>
-        </mass-and-balance-180hp>
+
 
         <mass-and-balance>
             <!-- Define some nodes for the Fuel and Payload dialog.
                  Aliasing is done later in Nasal/c172p.nas.
+                 Forward CG limit 5.5ins aft of datum
+                 Rear CG limit 9.6ins oft of datum
             -->
             <maximum-ramp-mass-lbs/>
             <maximum-takeoff-mass-lbs/>
