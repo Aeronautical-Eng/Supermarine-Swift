@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <name>Start Up</name>
+
+    <description>
+Before you go flying, you'll need to learn how to start the engines.
+
+This tutorial will take you through starting the Supermarine Swift FR.5.
+    </description>
+	
+    <step>
+        <message>Great, our lesson is complete. We're now ready to taxi to the runway.</message>
+        <view>
+            <heading-offset-deg>360.0</heading-offset-deg>
+            <pitch-offset-deg>-10.0</pitch-offset-deg>
+            <roll-offset-deg>0.0</roll-offset-deg>
+            <x-offset-m>-0.2</x-offset-m>
+            <y-offset-m>0.2</y-offset-m>
+            <z-offset-m>0.4</z-offset-m>
+            <field-of-view>60.0</field-of-view>
+        </view>
+    </step>
+
+</PropertyList>

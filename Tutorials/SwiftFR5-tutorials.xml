@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <tutorial include="preflight.xml"/>
+    <tutorial include="startup.xml"/>
+
+</PropertyList>
