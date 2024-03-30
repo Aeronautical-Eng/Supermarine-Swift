@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <title>Supermarine Swift FR.5</title>
+
+    <key>
+        <name>c</name>
+        <desc>Open Canopy</desc>
+    </key>
+    <key>
+        <name>shift + }</name>
+        <desc>Engine Autostart cheat</desc>
+    </key>
+    <key>
+        <name>f/F</name>
+        <desc>Toggle flashlight white/red/off</desc>
+    </key>
+    <key>
+        <name>P</name>
+        <desc>Toggle high resolution panel on/off</desc>
+    </key>
+    <key>
+        <name>Ctrl-c</name>
+        <desc>Toggle panel hotspots and labels</desc>
+    </key>
+    <key>
+        <name>l/L</name>
+        <desc>Increase/decrease panel lighting</desc>
+    </key>
+    <key>
+        <name>F9</name>
+        <desc>Popup Fuel and Payload Settings dialog</desc>
+    </key>
+
+    <key>
+        <name>Alt+3/Alt+PgDn</name>
+        <desc>Seat Down</desc>
+    </key>
+    <key>
+        <name>Alt+9/Alt+PgUp</name>
+        <desc>Seat Up</desc>
+    </key>
+    <key>
+        <name>Alt+8/ArrowUp</name>
+        <desc>Seat Forward</desc>
+    </key>
+    <key>
+        <name>Alt+2/ArrowDn</name>
+        <desc>Seat Back</desc>
+    </key>
+    <key>
+        <name>Alt+6/ArrowRight</name>
+        <desc>Seat Pitch Down</desc>
+    </key>
+    <key>
+        <name>Alt+4/ArrowLeft</name>
+        <desc>Seat Pitch Up</desc>
+    </key>
+
+    <key>
+        <name>Q</name>
+        <desc>Reset view</desc>
+    </key>
+
+    <line/>
+    <line>For checklists, see under Help-&gt;Aircraft Checklists</line>
+    <line/>
+    <line>To show the high resolution panel for a multi-</line>
+    <line>computer setup, press P.</line>
+    <line/>
+    <line/>
+    <line>_________Take-off_________</line>
+    <line>Takeoff: T/O flaps, full throttle, rotate at 150 KIAS</line>
+    <line>Climbout: no flaps, full throttle, 400 KIAS</line>
+    <line/>
+    <line>_________Cruise_________</line>
+    <line>Cruise sea-level: 6750rpm, 0.52M </line>
+    <line>Cruise 20K ft: 7000rpm, 0.72</line>
+    <line>Cruise 40K ft: 7500rpm, 0.82M </line>
+    <line/>
+    <line>_________Landing_________</line>
+    <line>Approach: T/O flaps, 185 KIAS</line>
+    <line>Landing: Full flaps, 160 KIAS</line>
+    <line/>
+    <line>_________Flying in turbulance_________</line>
+    <line>Level or climbing flight: 300kts/0.79M</line>
+    <line>Descending, airbrakes out: 270kts/0.79M</line>
+    <line/>
+    <line>_________V Speeds_________</line>
+    <line>Vso: 115kts</line>
+    <line>Vfe: 210kts</line>
+    <line>Vlo: 250kts</line>
+    <line>Va:  300kts/0.79M</line>
+    <line>Vy:  400kts</line>
+    <line>Vne: 600kts</line>
+    <line/>
+    <line>Stable Mach speeds: 0.86M</line>
+    <line>Nose-down trim needed: 0.86M - 0.91M</line>
+    <line>Slight nose-up trim at sonic speed: 0.955M</line>
+    <line>Stable above: 0.955M</line>
+    <line/>
+    <line>Approach  :   180 - 200kts</line>
+    <line>Best Glide:   200kts</line>
+
+</PropertyList>
