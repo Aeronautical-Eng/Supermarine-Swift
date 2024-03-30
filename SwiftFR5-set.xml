@@ -95,6 +95,7 @@
             <setting>1.0</setting>
         </flaps>
 
+        <!-- Walker position on exiting aircraft -->
         <model>
             <path>Aircraft/Supermarine-Swift/Models/Swift-FR5.xml</path>
             <map>
@@ -135,7 +136,7 @@
             <path>Aircraft/Supermarine-Swift/Sounds/swift-sound.xml</path>
         </sound>
 
-
+        <!-- Pilot initial view head eye position -->
         <view n="0">
             <internal archive="y">true</internal>
             <config>
