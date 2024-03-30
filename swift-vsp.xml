@@ -317,6 +317,7 @@
       <y>0</y>
       <z>0</z>
     </location>
+    <feed>5</feed>
     <feed>4</feed>
     <feed>3</feed>
     <feed>2</feed>
@@ -389,6 +390,18 @@
     <standpipe unit="LBS">10</standpipe>
     <contents unit="LBS">862</contents>
     <priority>3</priority>
+  </tank>
+    <tank number="5" type="FUEL">
+    <!--4: BellyTank-->
+    <location unit="M">
+      <x>5.92</x>
+      <y>0</y>
+      <z>-0.081</z>
+    </location>
+    <capacity unit="LBS">1694</capacity>
+    <standpipe unit="LBS">10</standpipe>
+    <contents unit="LBS">1694</contents>
+    <priority>1</priority>
   </tank>
 </propulsion>
 
