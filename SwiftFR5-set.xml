@@ -12,7 +12,7 @@
     http://www.airpowerworld.info/jet-fighter-planes/supermarine-swift-cockpit.jpg
  -->
 
-<PropertyList>
+<PropertyList include="SwiftFR5-main.xml">
     <fdm>
         <jsbsim>
             <fcs>
@@ -97,6 +97,12 @@
 
         <model>
             <path>Aircraft/Supermarine-Swift/Models/Swift-FR5.xml</path>
+            <map>
+				<default_exit>
+					<x-offset-m type ="float">-2</x-offset-m>
+					<y-offset-m type ="float">-1.5</y-offset-m>
+				</default_exit>
+			</map>
 
         </model>
 
@@ -210,24 +216,28 @@
     <consumables>
         <fuel>
             <tank n="0">
-                <level-gal_us archive="y">126.76</level-gal_us>
+                <level-gal_us archive="y">115.29</level-gal_us>
                 <name>Right Wing</name>
             </tank>
             <tank n="1">
-                <level-gal_us archive="y">111</level-gal_us>
+                <level-gal_us archive="y">115.29</level-gal_us>
                 <name>Left Wing</name>
             </tank>
             <tank n="2">
-                <level-gal_us archive="y">117.79</level-gal_us>
+                <level-gal_us archive="y">124.90</level-gal_us>
                 <name>Rear</name>
             </tank>
             <tank n="3">
-                <level-gal_us archive="y">168.67</level-gal_us>
+                <level-gal_us archive="y">117.69</level-gal_us>
                 <name>Center</name>
             </tank>
             <tank n="4">
                 <name>Front</name>
-                <level-gal_us archive="y">168.67</level-gal_us>
+                <level-gal_us archive="y">134.5</level-gal_us>
+            </tank>
+            <tank n="5">
+                <name>Belly "drop tank" </name>
+                <level-gal_us archive="y">264.21</level-gal_us>
             </tank>
         </fuel>
     </consumables>
