@@ -36,7 +36,7 @@
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/Supermarine-Swift/Models/Liveries", 10);
       
-      var rplayer = cmdarg();
+      <!--var rplayer = cmdarg();
       
       # Passengers
       var pax_state_path = rplayer.getNode("sim/multiplay/generic/int[16]").getPath();
@@ -49,7 +49,7 @@
       }, 1, 0);
 
       # Make sure human occupants are always visible in remote aircraft
-      rplayer.initNode("sim/model/occupants", 1, "BOOL");
+      rplayer.initNode("sim/model/occupants", 1, "BOOL");-->
     </load>
 
     <unload>
