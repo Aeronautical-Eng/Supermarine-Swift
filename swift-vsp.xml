@@ -64,7 +64,73 @@
     <y>0</y>
     <z>-0.02</z>
   </location>
+
+  <pointmass name="Pilot">
+    <weight unit="LBS"> 180 </weight>
+     <location name="POINTMASS" unit="M">
+       <x>3.19</x>
+       <y>0</y>
+       <z>0.31</z>
+      </location>
+  </pointmass>
+
+  <pointmass name="ammunition bay">
+    <weight unit="LBS"> 340 </weight>
+      <location name="POINTMASS" unit="M">
+          <x> 5.56 </x>
+          <y> 0 </y>
+          <z> -0.3 </z>
+      </location>
+  </pointmass>
+
+  <pointmass name="equipment bay">
+      <weight unit="LBS"> 100 </weight>
+        <location name="POINTMASS" unit="M">
+          <x> 5.56 </x>
+          <y> 0 </y>
+          <z> 0 </z>
+        </location>
+  </pointmass>
+
+  <pointmass name="weapons">
+      <weight unit="LBS"> 700 </weight>
+        <location name="POINTMASS" unit="M">
+          <x> 4 </x>
+          <y> 0 </y>
+          <z> -0.45 </z>
+        </location>
+  </pointmass>
+
+  <pointmass name="optional avionics">
+      <weight unit="LBS"> 65 </weight>
+        <location name="POINTMASS" unit="M">
+          <x> 1.56 </x>
+          <y> 0 </y>
+          <z> 0 </z>
+        </location>
+  </pointmass>
+  
+  <pointmass name="cameras">
+      <weight unit="LBS"> 104 </weight>
+        <location name="POINTMASS" unit="M">
+          <x> 1.78 </x>
+          <y> 0 </y>
+          <z> 0 </z>
+        </location>
+  </pointmass>
+
+  <pointmass name="Ballast weights">
+      <weight unit="LBS"> 290 </weight>
+        <location name="POINTMASS" unit="M">
+          <x> 12.06 </x>
+          <y> 0 </y>
+          <z> 0 </z>
+        </location>
+  </pointmass>
+
 </mass_balance>
+
+
 
 <ground_reactions>
   <contact type="BOGEY" name="NoseGear">
