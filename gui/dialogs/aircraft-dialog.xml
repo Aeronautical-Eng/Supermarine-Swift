@@ -77,7 +77,7 @@
             <layout>vbox</layout>
 
             <text>
-                <label>Tank size options</label>
+                <label>Drop Tank options</label>
                 <halign>center</halign>
             </text>
 
@@ -86,7 +86,7 @@
 
                 <radio>
                     <halign>left</halign>
-                    <label>Default (43 gal)</label>
+                    <label>No Drop Tank</label>
                     <property>sim/model/swift/tank_flag_0</property>
                     <live>true</live>
                     <enable>
@@ -109,7 +109,7 @@
 
                 <radio>
                     <halign>left</halign>
-                    <label>Integral (68 gal)</label>
+                    <label>Belly Tank "drop tank" (220 imp gal)</label>
                     <property>sim/model/swift/tank_flag_1</property>
                     <live>true</live>
                     <enable>
