@@ -156,8 +156,6 @@
             </generic>
         </multiplay>
 
-
-
         <multiplay>
             <generic>
                 <float n="2" alias="/engines/engine[0]/reheat" />
