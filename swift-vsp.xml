@@ -109,6 +109,23 @@
           <z> 0 </z>
         </location>
   </pointmass>
+
+  <pointmass name="ordanance">
+      <weight unit="LBS"> 1100 </weight>
+        <location name="POINTMASS" unit="M">
+          <x> 7.2 </x>
+          <y> 2.7 </y>
+          <z> -1.15 </z>
+        </location>
+  </pointmass>
+    <pointmass name="ordanance">
+      <weight unit="LBS"> 1100 </weight>
+        <location name="POINTMASS" unit="M">
+          <x> 7.2 </x>
+          <y> -2.7 </y>
+          <z> -1.15 </z>
+        </location>
+  </pointmass>
   
   <pointmass name="cameras">
       <weight unit="LBS"> 104 </weight>
@@ -118,6 +135,9 @@
           <z> 0 </z>
         </location>
   </pointmass>
+
+
+
 
   <pointmass name="Ballast weights">
       <weight unit="LBS"> 290 </weight>
