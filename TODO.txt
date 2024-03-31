@@ -15,7 +15,7 @@ Pilot:
 	- grab Alphasim one from Valiant, with textures from swift (they're the same model)
 
 Walker:
-	- add the c172p walker (use their code)(https://github.com/Juanvvc/c172p-detailed/wiki/Release-process-and-versioning) (in progress)
+	- add the c172p walker (use their code)(https://github.com/Juanvvc/c172p-detailed/wiki/Release-process-and-versioning)(done)
 	- improve the walker to look like the Pilot
 
 Gear:
@@ -50,10 +50,10 @@ FDM:
 	- look at enabling afterburner via nasal so that full military thrust is available 
 
 Immersion:
-	- add aircraft help <?> (modified from the c172p)
-	- add help/aircraft checklists (modified from the c172p) (in progress)
-	- add help/Tutorials (modified from the c172p) 
-	- add save/resume (modified from the c172p)
+	- add aircraft help <?> (modified from the c172p)(done)
+	- add help/aircraft checklists (modified from the c172p) (1% in progress)
+	- add help/Tutorials (modified from the c172p)(1% in progress) 
+	- add save/resume (modified from the c172p)(done)
 	- add pilot head views and seatcontrol (modified from the c172p) (in progress)
-	- add Fuel and Payload dialog window
+	- add Fuel and Payload dialog window (done)
 
