@@ -22,8 +22,8 @@ Geometry and schematics by Aviadejavu https://aviadejavu.ru/Images6/AN/AN06-11/3
                 <tutorials include="Tutorials/SwiftFR5-tutorials.xml"/>
 
         <model>
-            <path archive="y">Aircraft/Supermarine-Swift/Models/Swift-FR5.xml</path>
-            <fallback-model-index type="int">1</fallback-model-index>
+            <!--<path archive="y">Aircraft/Supermarine-Swift/Models/Swift-FR5.xml</path>
+            <fallback-model-index type="int">1</fallback-model-index> -->
 
             <crew>
               <pilot n="0">
@@ -65,7 +65,7 @@ Geometry and schematics by Aviadejavu https://aviadejavu.ru/Images6/AN/AN06-11/3
         </aircraft-data>
 
         <systems>
-            <path>Aircraft/Supermarine-Swift/Systems/systems.xml</path>
+           <!-- <path>Aircraft/Supermarine-Swift/Systems/systems.xml</path>-->
 
             <property-rule n="105">
                 <path>Aircraft/Supermarine-Swift/Systems/pilot.xml</path>
@@ -256,8 +256,8 @@ Geometry and schematics by Aviadejavu https://aviadejavu.ru/Images6/AN/AN06-11/3
             
             -->
         </weight>
-        <pilot-state type="int">0</pilot-state>
-        <securing-state type="int">0</securing-state>
+        <!--<pilot-state type="int">0</pilot-state>
+        <securing-state type="int">0</securing-state>-->
     </payload>
 
     <limits>
