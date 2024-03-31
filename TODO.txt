@@ -55,5 +55,5 @@ Immersion:
 	- add help/Tutorials (modified from the c172p)(1% in progress) 
 	- add save/resume (modified from the c172p)(some bugs)
 	- add pilot head views and seatcontrol (modified from the c172p) (in progress)
-	- add Fuel and Payload dialog window (some bugs)
+	- add Fuel and Payload dialog window (done)
 
