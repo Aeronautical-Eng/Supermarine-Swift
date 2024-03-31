@@ -9,12 +9,34 @@
             <enabled type="bool">true</enabled>
 
             <item>
-                <label>Autostart</label>
-                <binding>
-                    <command>nasal</command>
-                    <script>swift.autostart()</script>
-                </binding>
+                <label>Select Livery</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>aircraft.livery.dialog.toggle();</script>
+                    </binding>
             </item>
+
+            <item>
+                <label>Quickstart</label>
+                    <binding>
+                        <command>nasal</command>
+                        <script>
+                                <![CDATA[ 
+                                setprop("controls/engines/engine[0]/cutoff",0);
+                                setprop("engines/engine[0]/out-of-fuel",0);
+                                setprop("engines/engine[0]/cutoff",0);
+
+                                setprop("fdm/jsbsim/propulsion/starter_cmd",1);
+                                setprop("fdm/jsbsim/propulsion/cutoff_cmd",1);
+                                setprop("fdm/jsbsim/propulsion/set-running",0);
+                            ]]>
+                        </script>
+                    </binding>
+                </item>       
+               
+ 
+
+        
 
             <item>
                 <label>Aircraft Options</label>
@@ -32,13 +54,6 @@
                 </binding>
             </item>
 
-            <item>
-                <label>Select Livery</label>
-                <binding>
-                    <command>nasal</command>
-                    <script>aircraft.livery.dialog.toggle()</script>
-                </binding>
-            </item>
 
             <item>
                 <label>Registration</label>
@@ -56,14 +71,7 @@
                 </binding>
             </item>
 
-            <item>
-                <label>Show/Hide Yokes</label>
-                <binding>
-                    <command>property-toggle</command>
-                    <property>/sim/model/hide-yoke</property>
-                </binding>
-            </item>
-            
+          
             <item>
               <label>Panel in a Browser</label>
               <binding>
@@ -79,14 +87,6 @@
                     }
                 </script>
               </binding>
-            </item>
-
-            <item>
-                <label>Mooring Parameters</label>
-                <binding>
-                    <command>dialog-show</command>
-                    <dialog-name>mooring-parameters</dialog-name>
-                </binding>
             </item>
 
             <item>
