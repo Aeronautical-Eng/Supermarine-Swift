@@ -6,6 +6,10 @@ Supermarine Swift FR.5 additional details following similar methods coding to th
 
 Started March 28 2024 by Taeke van den Bosch, taekev@gmail.com
 
+Mass and fuel details from Pilots Notes Swift FR.5 AP-4348E-PN-Swift5-ocr supplied by AVIALOGS https://www.avialogs.com/aircraft-s/supermarine/item/104136-a-p-4348e-pilot-s-notes-swift-f-r-5
+and Jever Steam laundry https://www.jeversteamlaundry.org/swiftpic001.htm  
+
+Geometry and schematics by Aviadejavu https://aviadejavu.ru/Images6/AN/AN06-11/33-1.jpg and the-blueprints.com https://www.the-blueprints.com/blueprints/modernplanes/modern-su-sz/68898/view/supermarine_swift_fr_mk_5/.
 
 ************************************************************************
 -->
@@ -44,6 +48,20 @@ Started March 28 2024 by Taeke van den Bosch, taekev@gmail.com
  <!-- Save some properties when the simulator is shut down -->
         <aircraft-data>
             <path>/sim/model/swift/save-state</path>
+            <path>/systems/electrical/save-battery-charge</path>
+            <path>/systems/electrical/battery-charge-percent</path>
+            <path>/consumables/fuel/tank[0]/level-norm</path>
+            <path>/consumables/fuel/tank[1]/level-norm</path>
+            <path>/consumables/fuel/tank[2]/level-norm</path>
+            <path>/consumables/fuel/tank[3]/level-norm</path>
+            <path>/consumables/fuel/tank[5]/level-norm</path>
+            <path>/sim/model/immat</path>
+            <path>/sim/current-view/user/x-offset-m</path>
+            <path>/sim/current-view/user/y-offset-m</path>
+            <path>/sim/current-view/user/z-offset-m</path>
+            <path>/sim/current-view/user/pitch-offset-deg</path>
+            <path>/sim/current-view/user/default-field-of-view-deg</path>
+            <path>/fdm/jsbsim/fuel/tank</path>
         </aircraft-data>
 
         <systems>
@@ -144,7 +162,7 @@ Started March 28 2024 by Taeke van den Bosch, taekev@gmail.com
             <arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
             <min-lb type="double">0.0</min-lb>
             <max-lb type="double">700</max-lb>
-            <!-- guns and fittings arm (130mm forward of cg) -->
+            <!-- guns and fittings arm (1.30m forward of cg) -->
         </weight>
 
         <weight>
@@ -153,13 +171,13 @@ Started March 28 2024 by Taeke van den Bosch, taekev@gmail.com
             <arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
             <min-lb type="double">0.0</min-lb>
             <max-lb type="double">65</max-lb>
-            <!-- DME IFF GGS (400mm forward of cg) -->
+            <!-- DME IFF GGS (4.0m forward of cg) -->
         </weight>
 
 
         <weight n="6">
-            <name>nose cameras</name>
-            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]"/>
+            <name>cameras</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]"/>
             <selected>none</selected>
             <opt>
                 <name>none</name>
@@ -174,21 +192,6 @@ Started March 28 2024 by Taeke van den Bosch, taekev@gmail.com
                 <lbs>26</lbs>
             </opt>
             <opt>
-                <name>Both</name>
-                <lbs>52</lbs>
-            </opt>
-        <!-- F.95 nose and/or beam (550mm and 450mm forward of cg)   -->
-        </weight>
-
-        <weight n="7">
-            <name>mid cameras</name>
-            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]"/>
-            <selected>none</selected>
-            <opt>
-                <name>none</name>
-                <lbs>0</lbs>
-            </opt>
-            <opt>
                 <name>F.95 gun bay</name>
                 <lbs>26</lbs>
             </opt>
@@ -197,19 +200,20 @@ Started March 28 2024 by Taeke van den Bosch, taekev@gmail.com
                 <lbs>26</lbs>
             </opt>
             <opt>
-                <name>Both</name>
-                <lbs>52</lbs>
+                <name>All</name>
+                <lbs>104</lbs>
             </opt>
-        <!-- G.45 camera and F.95 gun bay camera (250mm forward of cg)  -->
+        <!-- F.95 nose and/or beam (5.50m and 4.5mm forward of cg)   -->
+        <!-- G.45 camera and F.95 gun bay camera (2.50m forward of cg)  -->
         </weight>
 
-        <weight>
-            <name type="string">Ballast-weights</name>
-            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[8]"/>
+        <weight n="7">
+            <name type="string">Ballast weights</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]"/>
             <arm-in alias="/fdm/jsbsim/inertia/pointmass-location-X-inches[0]"/>
             <min-lb type="double">0.0</min-lb>
             <max-lb type="double">290</max-lb>
-            <!-- 19 total ballast weights 10 lb each  (650mm rear of CG)
+            <!-- 19 total ballast weights 10 lb each  (6.50mm rear of CG)
               Ballasting as follows:
               14 - for guns and fittings
               1  - for DME
