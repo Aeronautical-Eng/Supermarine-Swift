@@ -156,38 +156,7 @@
             </generic>
         </multiplay>
 
-        <menubar>
-            <default>
-                <menu n="50">
-                    <label>Supermarine Swift</label>
-                    <enabled type="bool">true</enabled>
-                    <item>
-                        <label>Select Livery</label>
-                        <binding>
-                            <command>nasal</command>
-                            <script>aircraft.livery.dialog.toggle();</script>
-                        </binding>
-                    </item>
-                    <item>
-                        <label>Quickstart</label>
-                        <binding>
-                            <command>nasal</command>
-                            <script>
-                                <![CDATA[ 
-                                setprop("controls/engines/engine[0]/cutoff",0);
-                                setprop("engines/engine[0]/out-of-fuel",0);
-                                setprop("engines/engine[0]/cutoff",0);
 
-                                setprop("fdm/jsbsim/propulsion/starter_cmd",1);
-                                setprop("fdm/jsbsim/propulsion/cutoff_cmd",1);
-                                setprop("fdm/jsbsim/propulsion/set-running",0);
-                            ]]>
-                            </script>
-                        </binding>
-                    </item>
-                </menu>
-            </default>
-        </menubar>
 
         <multiplay>
             <generic>
