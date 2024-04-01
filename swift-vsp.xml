@@ -66,7 +66,7 @@
   </location>
 
   <pointmass name="Pilot">
-    <weight unit="LBS"> 180 </weight>
+    <weight unit="LBS"> 0 </weight>
      <location name="POINTMASS" unit="M">
        <x>3.19</x>
        <y>0</y>
@@ -75,7 +75,7 @@
   </pointmass>
 
   <pointmass name="ammunition bay">
-    <weight unit="LBS"> 340 </weight>
+    <weight unit="LBS"> 0 </weight>
       <location name="POINTMASS" unit="M">
           <x> 5.56 </x>
           <y> 0 </y>
@@ -84,7 +84,7 @@
   </pointmass>
 
   <pointmass name="equipment bay">
-      <weight unit="LBS"> 100 </weight>
+      <weight unit="LBS"> 0 </weight>
         <location name="POINTMASS" unit="M">
           <x> 5.56 </x>
           <y> 0 </y>
@@ -93,7 +93,7 @@
   </pointmass>
 
   <pointmass name="weapons">
-      <weight unit="LBS"> 700 </weight>
+      <weight unit="LBS"> 0 </weight>
         <location name="POINTMASS" unit="M">
           <x> 4 </x>
           <y> 0 </y>
@@ -102,7 +102,7 @@
   </pointmass>
 
   <pointmass name="optional avionics">
-      <weight unit="LBS"> 65 </weight>
+      <weight unit="LBS"> 0 </weight>
         <location name="POINTMASS" unit="M">
           <x> 1.56 </x>
           <y> 0 </y>
@@ -110,25 +110,35 @@
         </location>
   </pointmass>
 
-  <pointmass name="ordanance">
-      <weight unit="LBS"> 1100 </weight>
-        <location name="POINTMASS" unit="M">
-          <x> 7.2 </x>
-          <y> 2.7 </y>
-          <z> -1.15 </z>
-        </location>
-  </pointmass>
-    <pointmass name="ordanance">
-      <weight unit="LBS"> 1100 </weight>
+  <pointmass name="Left Wing Station 1">
+      <weight unit="LBS"> 0 </weight>
         <location name="POINTMASS" unit="M">
           <x> 7.2 </x>
           <y> -2.7 </y>
           <z> -1.15 </z>
         </location>
   </pointmass>
+
+  <pointmass name="Center Station 2">
+      <weight unit="LBS"> 0 </weight>
+        <location name="POINTMASS" unit="M">
+          <x> 5.92 </x>
+          <y> 0 </y>
+          <z> -1.15 </z>
+        </location>
+  </pointmass>
+
+  <pointmass name="Right Wing Station 3">
+      <weight unit="LBS"> 0 </weight>
+        <location name="POINTMASS" unit="M">
+          <x> 7.2 </x>
+          <y> 2.7 </y>
+          <z> -1.15 </z>
+        </location>
+  </pointmass>
   
   <pointmass name="cameras">
-      <weight unit="LBS"> 104 </weight>
+      <weight unit="LBS"> 0 </weight>
         <location name="POINTMASS" unit="M">
           <x> 1.78 </x>
           <y> 0 </y>
@@ -140,7 +150,7 @@
 
 
   <pointmass name="Ballast weights">
-      <weight unit="LBS"> 290 </weight>
+      <weight unit="LBS"> 0 </weight>
         <location name="POINTMASS" unit="M">
           <x> 12.06 </x>
           <y> 0 </y>
@@ -477,7 +487,7 @@
     <contents unit="LBS">862</contents>
     <priority>3</priority>
   </tank>
-    <tank number="5" type="FUEL">
+    <tank type="FUEL" name="Belly drop tank">
     <!--4: BellyTank-->
     <location unit="M">
       <x>5.92</x>

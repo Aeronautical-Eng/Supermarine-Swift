@@ -186,26 +186,33 @@
             <tank n="0">
                 <level-gal_us archive="y">115.29</level-gal_us>
                 <name>Right Wing</name>
+                <kill-when-empty type="bool">false</kill-when-empty>
             </tank>
             <tank n="1">
                 <level-gal_us archive="y">115.29</level-gal_us>
                 <name>Left Wing</name>
+                <kill-when-empty type="bool">false</kill-when-empty>
             </tank>
             <tank n="2">
                 <level-gal_us archive="y">124.90</level-gal_us>
                 <name>Rear</name>
+                <kill-when-empty type="bool">false</kill-when-empty>
             </tank>
             <tank n="3">
                 <level-gal_us archive="y">117.69</level-gal_us>
                 <name>Center</name>
+                <kill-when-empty type="bool">false</kill-when-empty>
             </tank>
             <tank n="4">
                 <name>Front</name>
                 <level-gal_us archive="y">134.5</level-gal_us>
+                <kill-when-empty type="bool">false</kill-when-empty>
             </tank>
             <tank n="5">
-                <name>Belly "drop tank" </name>
+                <name>Belly drop tank</name>
                 <level-gal_us archive="y">264.21</level-gal_us>
+                <kill-when-empty type="bool">false</kill-when-empty>
+                <selected type="bool">false</selected >
             </tank>
         </fuel>
     </consumables>
