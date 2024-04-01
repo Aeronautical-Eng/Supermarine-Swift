@@ -19,7 +19,7 @@ Geometry and schematics by Aviadejavu https://aviadejavu.ru/Images6/AN/AN06-11/3
         
                 <help include="Supermarine-Swift-help.xml"/>
                 <checklists include="Supermarine-Swift-checklists.xml"/>
-                <tutorials include="Tutorials/SwiftFR5-tutorials.xml"/>
+                <!--<tutorials include="Tutorials/SwiftFR5-tutorials.xml"/>-->
 
         <model>
             <!--<path archive="y">Aircraft/Supermarine-Swift/Models/Swift-FR5.xml</path>

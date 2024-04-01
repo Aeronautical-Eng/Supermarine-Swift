@@ -12,28 +12,28 @@
         <name>shift + }</name>
         <desc>Engine Autostart cheat</desc>
     </key>
-    <key>
+   <!-- <key>
         <name>f/F</name>
         <desc>Toggle flashlight white/red/off</desc>
     </key>
     <key>
         <name>P</name>
         <desc>Toggle high resolution panel on/off</desc>
-    </key>
+    </key>-->
     <key>
         <name>Ctrl-c</name>
         <desc>Toggle panel hotspots and labels</desc>
     </key>
-    <key>
+    <!--<key>
         <name>l/L</name>
         <desc>Increase/decrease panel lighting</desc>
-    </key>
+    </key>-->
     <key>
         <name>F9</name>
         <desc>Popup Fuel and Payload Settings dialog</desc>
     </key>
 
-    <key>
+    <!--<key>
         <name>Alt+3/Alt+PgDn</name>
         <desc>Seat Down</desc>
     </key>
@@ -61,14 +61,14 @@
     <key>
         <name>Q</name>
         <desc>Reset view</desc>
-    </key>
+    </key>-->
 
     <line/>
     <line>For checklists, see under Help-&gt;Aircraft Checklists</line>
     <line/>
-    <line>To show the high resolution panel for a multi-</line>
+    <!--<line>To show the high resolution panel for a multi-</line>
     <line>computer setup, press P.</line>
-    <line/>
+    <line/>-->
     <line/>
     <line>_________Take-off_________</line>
     <line>Takeoff: T/O flaps, full throttle, rotate at 150 KIAS</line>

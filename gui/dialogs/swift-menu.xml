@@ -45,13 +45,13 @@
                 </binding>
             </item>
 
-            <item>
+            <!--<item>
                 <label>Ground Equipment</label>
                 <binding>
                     <command>dialog-show</command>
                     <dialog-name>ground-equipment</dialog-name>
                 </binding>
-            </item>
+            </item>-->
 
 
             <item>
@@ -62,52 +62,35 @@
                 </binding>
             </item>
 
-            <item>
+            <!--<item>
                 <label>Flashlight</label>
                 <binding>
                     <command>nasal</command>
                     <script>swift.toggle_flashlight()</script>
                 </binding>
-            </item>
+            </item>-->
 
           
-            <item>
-              <label>Panel in a Browser</label>
-              <binding>
-                <command>nasal</command>
-                <script>
-                    if (getprop("/sim/http/running")) {
-                        var port = getprop("/sim/http/options/listening-port");
-                        var url = sprintf("http://localhost:%d/aircraft-dir/WebPanel/swift-webpanel.html", port);
-                        fgcommand("open-browser", props.Node.new({ "url": url }));
-                    }
-                    else {
-                        gui.popupTip("Internal webserver not running. Restart FlightGear with --httpd=8080", 5.0);
-                    }
-                </script>
-              </binding>
-            </item>
-
-            <item>
+           <!--<item>
                 <label>Save/Resume</label>
                 <binding>
                     <command>dialog-show</command>
                     <dialog-name>save</dialog-name>
                 </binding>
-            </item>
+            </item>-->
             
-            <item>
-                <label>------------------</label>
+        <!--    <item>-->
+                <!--<label>-</label>
                 <enabled>false</enabled>
-            </item>
+            </item>-->
             
-            <item>
+            <!--<item>
                 <label>About This Aircraft</label>
                 <binding>
                     <command>dialog-show</command>
                     <dialog-name>swift-about-dialog</dialog-name>
                 </binding>
-            </item>
+            </item>-->
             
         </menu>
 
