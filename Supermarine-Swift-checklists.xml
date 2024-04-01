@@ -7,53 +7,54 @@
         <checklist>
             <title>Engine Start</title>
             <item>
-                <name>Speedbrakes</name>
-                <value>Open</value>
-            </item>
-            <item>
-                <name>Fuel pumps</name>
+                <name>Battery isolation switch</name>
                 <value>ON</value>
             </item>
             <item>
-                <name>AIR GEN START</name>
+                <name>Fuel master switch</name>
                 <value>ON</value>
             </item>
             <item>
-                <name>GENERATION START</name>
-                <value>PRESS</value>
-            </item>
-            <item>
-                <name>ENG IGN</name>
+                <name>Flight instruments early start switch</name>
                 <value>ON</value>
             </item>
             <item>
-                <name>BAT on caution panel</name>
-                <value>Wait for unlit</value>
+                <name>Starter master and ignition switch</name>
+                <value>ON</value>
+            </item>
+            <item>
+                <name>H.P. cock</name>
+                <value>Locked on</value>
+            </item>
+            <item>
+                <name>Relight button</name>
+                <value>Test - irregular clicking sound</value>
             </item>
             <item>
                 <name>ENGINE START</name>
-                <value>1</value>
+                <value>Press starter button</value>
             </item>
             <item>
-                <name>ENGINE START</name>
-                <value>2</value>
+                <name>CHECK</name>
+                <value>2-3 sec engine 1450 r.p.m. </value>
             </item>
             <item>
-                <name>CORRECT ROTATION</name>
-                <value>Wait till both green</value>
+                <name>CHECK</name>
+                <value>GEN. Warning lights ext. at  engine 1600 r.p.m.  </value>
             </item>
             <item>
-                <name>Throttle latches</name>
-                <value>Engage to idle</value>
+                <name>CHECK</name>
+                <value>30 sec engine idle 2750 r.p.m. +/- 100 </value>
             </item>
             <item>
-                <name>CORRECT ROTATION</name>
-                <value>Wait till goes out</value>
+                <name>...if failed start</name>
+                <value>Immediately close H.P. cock</value>
             </item>
             <item>
-                <name>Speedbrakes</name>
-                <value>CLOSE</value>
+                <name>WAIT</name>
+                <value>Wait 30 sec, then repeat from ENGINE START </value>
             </item>
+
         </checklist>
     </group>
 </PropertyList>      
