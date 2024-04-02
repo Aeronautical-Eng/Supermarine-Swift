@@ -205,14 +205,13 @@
             </tank>
             <tank n="4">
                 <name>Front</name>
-                <level-gal_us archive="y">134.5</level-gal_us>
+                <level-gal_us archive="y">264.21</level-gal_us>
                 <kill-when-empty type="bool">false</kill-when-empty>
             </tank>
             <tank n="5">
-                <name>Belly drop tank</name>
-                <level-gal_us archive="y">264.21</level-gal_us>
+                <name>Belly "drop tank"</name>
+                <level-gal_us archive="y">134.5</level-gal_us>
                 <kill-when-empty type="bool">false</kill-when-empty>
-                <selected type="bool">false</selected >
             </tank>
         </fuel>
     </consumables>

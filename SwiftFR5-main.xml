@@ -205,19 +205,18 @@ Geometry and schematics by Aviadejavu https://aviadejavu.ru/Images6/AN/AN06-11/3
 
         <weight n="8">
             <name>Center Station 2</name>
-            <tank>6</tank>
+            <tank>5</tank>
             <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]"/>
-            <selected>Belly drop tank</selected>
+            <selected>Droptank</selected>
             <opt>
                 <name>none</name>
                 <lbs>0</lbs>
             </opt>
             <opt>
-                <name>Belly drop tank</name>
-                <lbs>1694</lbs>
-                <level-gal_us>264.21</level-gal_us>
+                <name>Droptank</name>
+                <lbs>100</lbs>
+                <gals>264.21</gals>
             </opt>
-
         </weight>
 
         <weight n="9">
