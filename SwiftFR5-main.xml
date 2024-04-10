@@ -55,7 +55,7 @@ Geometry and schematics by Aviadejavu https://aviadejavu.ru/Images6/AN/AN06-11/3
             <path>/consumables/fuel/tank[2]/level-norm</path>
             <path>/consumables/fuel/tank[3]/level-norm</path>
             <path>/consumables/fuel/tank[5]/level-norm</path>
-            <path>/sim/model/immat</path>
+            <!--path>/sim/model/immat</path-->
             <path>/sim/current-view/user/x-offset-m</path>
             <path>/sim/current-view/user/y-offset-m</path>
             <path>/sim/current-view/user/z-offset-m</path>
