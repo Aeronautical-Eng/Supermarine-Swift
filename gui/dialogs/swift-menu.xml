@@ -37,13 +37,13 @@
 
         
 
-            <item>
+            <!--item>
                 <label>Aircraft Options</label>
                 <binding>
                     <command>dialog-show</command>
                     <dialog-name>aircraft-dialog</dialog-name>
                 </binding>
-            </item>
+            </item-->
 
             <!--<item>
                 <label>Ground Equipment</label>
@@ -54,13 +54,13 @@
             </item>-->
 
 
-            <item>
+            <!--item>
                 <label>Registration</label>
                 <binding>
                     <command>dialog-show</command>
                     <dialog-name>registration-dialog</dialog-name>
                 </binding>
-            </item>
+            </item-->
 
             <!--<item>
                 <label>Flashlight</label>
