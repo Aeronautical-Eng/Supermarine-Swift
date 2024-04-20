@@ -21,7 +21,7 @@ Geometry and schematics by Aviadejavu https://aviadejavu.ru/Images6/AN/AN06-11/3
                 <checklists include="Supermarine-Swift-checklists.xml"/>
                 <!--<tutorials include="Tutorials/SwiftFR5-tutorials.xml"/>-->
         
-        <flight-recorder include="Systems/f16-flight-recorder.xml"/>
+        <flight-recorder include="Systems/swift-flight-recorder.xml"/>
 
         <model>
             <!--<path archive="y">Aircraft/Supermarine-Swift/Models/Swift-FR5.xml</path>
