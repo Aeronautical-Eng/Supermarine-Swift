@@ -6,6 +6,8 @@ Authors:
    Virtavia (3d) for the excellent 3d model of the exterior and interior.
    FGUK: StuartC, Enrogue, Avionyx, Richard Harrison
 
+Some files are licensed under CC-BY or CC0. Attribution is given in the [Thanks](https://github.com/Zaretto/Supermarine-Swift/master/Thanks) file.
+
 ************************************************************************************
 
   GNU GENERAL PUBLIC LICENSE
