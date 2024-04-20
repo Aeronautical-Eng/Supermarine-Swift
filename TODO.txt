@@ -12,7 +12,9 @@ Cockpit Animations:
 	- add a high resolution panel extra panel (modified from c172p but with swift instruments)
 
 Pilot:
-	- grab Alphasim one from Valiant, with textures from swift (they're the same model)
+	- grab Alphasim one from Valiant, with textures from swift (they're the same model) Grabcad by Valery Rutkovskiy
+	- In the meantime pilot from the Yasim Hawker Hunter(in progress)
+
 
 Walker:
 	- add the c172p walker (use their code)(https://github.com/Juanvvc/c172p-detailed/wiki/Release-process-and-versioning)(done)
@@ -45,6 +47,10 @@ Sounds:
 Bombable:
 	- guns
 	- nasal model data
+	- OPRF combat setup menu's, emesary-damage-system, event view,  mil bases, tacview(done)
+	- OPRF weapons (in progress)
+
+	-droptanks (hawker hunter type?)
 
 FDM:
 	- look at enabling afterburner via nasal so that full military thrust is available 
@@ -53,7 +59,8 @@ Immersion:
 	- add aircraft help <?> (modified from the c172p)(done)
 	- add help/aircraft checklists (modified from the c172p) (1% in progress)
 	- add help/Tutorials (modified from the c172p)(1% in progress) 
-	- add save/resume (modified from the c172p)(some bugs)
+	- add save/resume (modified from the c172p)(done)
 	- add pilot head views and seatcontrol (modified from the c172p) (in progress)
 	- add Fuel and Payload dialog window (done)
+	- add Fuel and Stores (in progress 40%)
 
