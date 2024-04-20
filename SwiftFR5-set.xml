@@ -65,6 +65,7 @@
         <status type="string">V1.0</status>
         <flight-model>jsb</flight-model>
         <aero>swift-vsp</aero>
+        <variant-id type="int">1</variant-id>
 
         <tags>
             <tag>fighter</tag>
@@ -148,11 +149,32 @@
             </config>
         </view>
 
+<!--pilot taken from yasim hunter-->
+		<menubar>
+			<default>
+				<menu n="10">
+					<label>Hunter</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Toggle pilot model</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>sim/model/hunter/show-pilot</property>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+		<hunter>
+			<show-pilot archive="y"
+									type="bool">true</show-pilot>
+		</hunter>
+        
         <multiplay>
             <generic>
 
                 <float n="2" alias="/engines/engine[0]/reheat" />
-
+                <int n="9" type="int" alias="/sim/variant-id"/>
             </generic>
         </multiplay>
 
@@ -161,6 +183,15 @@
                 <float n="2" alias="/engines/engine[0]/reheat" />
             </generic>
         </multiplay>
+
+        <submodels>
+            <serviceable type="bool">true</serviceable>
+            <path>submodels.xml</path>
+        </submodels>
+        <submodels>
+			<serviceable type="bool">true</serviceable>
+			<!--<path>Aircraft/Hunter/Models/hunter-submodels.xml</path>-->
+		</submodels>
 
     </sim>
 
@@ -205,12 +236,12 @@
             </tank>
             <tank n="4">
                 <name>Front</name>
-                <level-gal_us archive="y">264.21</level-gal_us>
+                <level-gal_us archive="y">256.7</level-gal_us>
                 <kill-when-empty type="bool">false</kill-when-empty>
             </tank>
             <tank n="5">
                 <name>Belly "drop tank"</name>
-                <level-gal_us archive="y">134.5</level-gal_us>
+                <level-gal_us archive="y">130.6</level-gal_us>
                 <kill-when-empty type="bool">false</kill-when-empty>
             </tank>
         </fuel>
@@ -230,6 +261,62 @@
         <Supermarine-Swift>
             <file>Aircraft/Supermarine-Swift/Nasal/liveries.nas</file>
         </Supermarine-Swift>
+
+        <SwiftFR5>
+            <file>Nasal/save.nas</file>
+        </SwiftFR5>
+
+        <notifications>
+            <file>Aircraft/Supermarine-Swift/Nasal/ArmamentNotification.nas</file>
+             <file>Aircraft/Supermarine-Swift/Nasal/GeoBridgedTransmitter.nas</file>
+        </notifications>
+
+        <vector>
+            <!-- must be before RCS, armament and radar -->
+            <file>Aircraft/f16/Nasal/vector.nas</file>
+        </vector>
+        
+        <damage>
+            <file>Aircraft/Supermarine-Swift/Nasal/damage.nas</file>
+        </damage>
+        
+        <rcs>
+            <!-- must be before radar -->
+            <file>Aircraft/Supermarine-Swift/Nasal/radar/rcs_mand.nas</file>
+            <file>Aircraft/Supermarine-Swift/Nasal/radar/rcs.nas</file>
+        </rcs>
+
+ 
+
+        <!--In windows the recorded tacview telemetry.acmi files are under C:\Users\Your PC\AppData\Roaming\flightgear.org\Export-->
+        <tacview>
+            <file>Aircraft/Supermarine-Swift/Nasal/tacview.nas</file>
+        </tacview>
+
+        <radar_system>
+            <file>Aircraft/Supermarine-Swift/Nasal/radar/radar-system-database.nas</file>
+            <file>Aircraft/Supermarine-Swift/Nasal/radar/radar-system.nas</file>
+            <file>Aircraft/Supermarine-Swift/Nasal/radar/apg-68.nas</file>
+        </radar_system>
+
+        <airbases>
+            <file>Aircraft/Supermarine-Swift/Nasal/airbases.nas</file>
+        </airbases>
+
+        <aircraft>
+            <file>Aircraft/Supermarine-Swift/Nasal/aircraft-main.nas</file>
+            <file>Aircraft/Supermarine-Swift/Nasal/ext_stores.nas</file>
+            <file>Aircraft/Supermarine-Swift/Nasal/fuel-system.nas</file>
+        </aircraft>
+
+		<hunter>
+			<file>Aircraft/Supermarine-Swift/Models/hunter.nas</file>
+		</hunter>
+
+        <datalink>
+            <file>Aircraft/Supermarine-Swift/Nasal/datalink.nas</file>
+        </datalink>
+
     </nasal>
 
 </PropertyList>
