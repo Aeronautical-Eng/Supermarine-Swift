@@ -19,22 +19,18 @@
                 <label>Quickstart</label>
                 <binding>
                     <command>nasal</command>
-                    <script>
-                        <![CDATA[ 
-                        setprop("controls/engines/engine[0]/cutoff",0);
-                        setprop("engines/engine[0]/out-of-fuel",0);
-                        setprop("engines/engine[0]/cutoff",0);
-
-                        setprop("fdm/jsbsim/propulsion/starter_cmd",1);
-                        setprop("fdm/jsbsim/propulsion/cutoff_cmd",1);
-                        setprop("fdm/jsbsim/propulsion/set-running",0);
-                    ]]>
-                    </script>
+                    <script>aircraft.quickstart()</script>
                 </binding>
             </item>       
                
  
-
+            <item>
+                <label>Fuel and Stores</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>aircraft.ext_loads_dlg.open()</script>
+                </binding>
+            </item>
         
 
             <!--item>
@@ -71,13 +67,13 @@
             </item>-->
 
           
-           <!--<item>
+           <item>
                 <label>Save/Resume</label>
                 <binding>
                     <command>dialog-show</command>
                     <dialog-name>save</dialog-name>
                 </binding>
-            </item>-->
+            </item>
             
         <!--    <item>-->
                 <!--<label>-</label>
@@ -91,6 +87,45 @@
                     <dialog-name>swift-about-dialog</dialog-name>
                 </binding>
             </item>-->
+
+
+        </menu>
+
+        <menu n="100">
+            <label>|</label>
+            <enabled type="bool">false</enabled>
+        </menu>
+
+        <menu n="101">
+            <label>OPRF Combat</label>
+            <enabled type="bool">true</enabled>
+
+            <item>
+                <label>Combat Event Log</label>
+                <binding>
+                    <command>dialog-show</command>
+                    <dialog-name>flightlog</dialog-name>
+                </binding>
+            </item>
+
+
+            <item>
+                <label>Reset to Airbase (military only)</label>
+                <binding>
+                    <command>dialog-show</command>
+                    <dialog-name>airbases</dialog-name>
+                </binding>
+            </item>
+
+            <item>
+                <label>Tacview Options</label>
+                <enabled type="bool">true</enabled>
+                <name>tacview</name>
+                <binding>
+                    <command>dialog-show</command>
+                            <dialog-name>tacview</dialog-name>
+                </binding>
+            </item>
             
         </menu>
 

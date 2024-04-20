@@ -52,7 +52,7 @@
             <row>1</row>
             <col>0</col>
             <pref-height>110</pref-height>
-            <property>/sim/gui/dialogs/swift/save/selected</property>
+            <property>/sim/gui/dialogs/SwiftFR5/save/selected</property>
             <value>Slot 1</value>
             <value>Slot 2</value>
             <value>Slot 3</value>
@@ -84,7 +84,7 @@
             <editable>true</editable>
             <wrap>true</wrap>
             <live>false</live>
-            <property>/sim/gui/dialogs/swift/save/description</property>
+            <property>/sim/gui/dialogs/SwiftFR5/save/description</property>
         </textbox>
 
         <textbox>
@@ -99,7 +99,7 @@
             <editable>false</editable>
             <wrap>true</wrap>
             <live>true</live>
-            <property>/sim/gui/dialogs/swift/save/timestamp</property>
+            <property>/sim/gui/dialogs/SwiftFR5/save/timestamp</property>
         </textbox>
     </group>
 
@@ -126,7 +126,7 @@
             </binding>
             <binding>
                 <command>nasal</command>
-                <script>swift.save_state()</script>
+                <script>SwiftFR5.save_state()</script>
             </binding>
         </button>
 
@@ -136,7 +136,7 @@
             <legend>Resume</legend>
             <binding>
                 <command>nasal</command>
-                <script>swift.resume_state()</script>
+                <script>SwiftFR5.resume_state()</script>
             </binding>
         </button>
     </group>
@@ -171,7 +171,7 @@
                 setprop("/save/timestring", "");
 
                 var string = "";
-                var sel_slot = getprop("/sim/gui/dialogs/swift/save/selected");
+                var sel_slot = getprop("/sim/gui/dialogs/SwiftFR5/save/selected");
 
                 if (sel_slot == "Slot 1") {string = "save1.xml";}
                     else if (sel_slot == "Slot 2") {string = "save2.xml";}
@@ -179,14 +179,14 @@
                     else if (sel_slot == "Slot 4") {string = "save4.xml";}
                     else if (sel_slot == "Slot 5") {string = "save5.xml";}
 
-                swift.read_state_from_file(string);
+                SwiftFR5.read_state_from_file(string);
 
                 var description = getprop("/save/description");
                 var timestamp = getprop("/save/timestring");
 
-                setprop("/sim/gui/dialogs/swift/save/description", description);
-                setprop("/sim/gui/dialogs/swift/save/timestamp", timestamp);
-                setprop("/sim/gui/dialogs/swift/save/filename", string);
+                setprop("/sim/gui/dialogs/SwiftFR5/save/description", description);
+                setprop("/sim/gui/dialogs/SwiftFR5/save/timestamp", timestamp);
+                setprop("/sim/gui/dialogs/SwiftFR5/save/filename", string);
             }
         </open>
     </nasal>
