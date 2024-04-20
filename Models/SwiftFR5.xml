@@ -1,0 +1,14 @@
+   
+   <PropertyList>
+        <animation>
+            <type>select</type>
+            <nopreview/>
+            <object-name>Belly Tank</object-name>
+            <condition>
+                <equals>
+                    <property>payload/weight[5]/selected</property>
+                    <value>Droptank</value>
+                 </equals>
+             </condition>
+        </animation>
+    </PropertyList>
